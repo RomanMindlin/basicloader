@@ -13,12 +13,14 @@ SRCS		+= lz4.c
 DEFS		+= UP_PAGEBUFFER_SZ=128
 
 FLAGS		+= -mcpu=cortex-m0plus
+FLAGS		+= -mthumb
 FLAGS		+= -I$(SRCDIR)/common
 
 CFLAGS		+= -Wall
 CFLAGS		+= -Os
 
 LDFLAGS		+= -mcpu=cortex-m0plus
+LDFLAGS		+= -mthumb
 LDFLAGS		+= -T$(SRCDIR)/arm/unicorn/ld/mem.ld
 LDFLAGS		+= -T$(SRCDIR)/arm/unicorn/ld/bootloader.ld
 

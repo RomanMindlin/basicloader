@@ -29,6 +29,7 @@ DEFS		+= LZ4_PAGEBUFFER_SZ=128
 DEFS		+= UP_PAGEBUFFER_SZ=128
 
 FLAGS		+= -mcpu=cortex-m0plus
+FLAGS		+= -mthumb
 FLAGS		+= -I$(SRCDIR)/common
 
 CFLAGS		+= -Wall
@@ -36,6 +37,7 @@ CFLAGS		+= -Os
 CFLAGS		+= -I$(SRCDIR)/arm/CMSIS/Device/ST/STM32$(STM32_T)xx/Include
 
 LDFLAGS		+= -mcpu=cortex-m0plus
+LDFLAGS		+= -mthumb
 LDFLAGS		+= -T$(SRCDIR)/arm/stm32lx/ld/STM32$(STM32_T)xx$(STM32_S).ld
 LDFLAGS		+= -T$(SRCDIR)/arm/stm32lx/ld/STM32$(STM32_T).ld
 
